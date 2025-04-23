@@ -1,0 +1,246 @@
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+#sonic_title {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+h1 {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: all .5s;
+    overflow-y: auto;
+  
+    padding: 20px 20px 0px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.nav-menu p {
+    color: #ffffff;
+}
+
+.nav-menu li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.nav-menu a {
+    display: inline-block;
+}
+
+.nav-menu img {
+    margin: 10px 0;
+}
+
+.mobile-nav-toggle {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 99;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    transition: all .4s;
+    outline: none !important;
+    line-height: 1;
+    cursor: pointer;
+    text-align: right;
+}
+
+.mobile-nav-toggle i {
+    color: #fff;
+}
+
+.mobile-nav-active {
+    overflow: hidden;
+}
+
+.mobile-nav-active #header {
+    left: 0;
+}
+
+.mobile-nav-active .mobile-nav-toggle i {
+    color: #fff;
+}
+
+#player {
+    margin: 0px auto;
+    width: 100%;
+    height: 100%;
+}
+
+.background_hora {
+    width: 196px;
+    height: 46px;
+    background-color: #fff;
+    position: absolute;
+    right: 20px;
+    bottom: 100px;
+    border-radius: 50px;
+}
+
+#relogio {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    color: red;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    right: 15px;
+    bottom: 15px;
+    background: #3a0d5c;
+    color: #fff;
+    transition: display .5s ease-in-out;
+    z-index: 99999;
+}
+
+.back-to-top i {
+    font-size: 24px;
+    position: absolute;
+    top: 7px;
+    left: 8px;
+}
+
+.back-to-top:hover {
+    color: #fff;
+    background: #0678e3;
+    transition: background .2s ease-in-out;
+}
+
+.ios-popup {
+    color: #1C2529;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 3px solid rgba(255, 44, 13, 0.749);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.ios-popup p {
+    margin: 0 0 10px;
+}
+
+.ios-popup img {
+    width: 24px;
+    vertical-align: middle;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+@media (min-width: 992px) {
+    .nav-menu {
+        width: 400px; /* Ancho para pantallas grandes */
+    }
+    .mobile-nav-toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    #header {
+        width: auto;
+        background: #000000;
+        border-right: 3px solid #000000;
+        left: -300px;
+        padding: 20px 30px 100vh 10px;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        width: 240px; /* Ancho para pantallas pequeÃ±as */
+    }
+    #player {
+        width: 100%;
+        height: 100%;
+    }
+    .background_hora {
+        display: none;
+    }
+    #relogio {
+        display: none;
+    }
+}
+
