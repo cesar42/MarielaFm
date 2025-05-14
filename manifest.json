@@ -1,7 +1,7 @@
 {
-    "name": "Antena Dorada Fm ",
-    "short_name": "Antena Dorada Fm",
-    "description": "Señal que Avanza",
+    "name": "Mariela Fm",
+    "short_name": "Mariela Fm",
+    "description": "Te Acompaña",
     "icons": [
         {
             "src": "img/logo.png",
@@ -37,7 +37,7 @@
             "src": "img/logo.png",
             "sizes": "512x512",
             "type": "image/png",
-            "purpose": "maskable"
+            "purpose": "image/png"
         },
         {
             "src": "img/logo.png",
